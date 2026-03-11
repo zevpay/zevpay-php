@@ -158,7 +158,10 @@ class ClientTest extends TestCase
         ]);
 
         $handlerStack = HandlerStack::create($mock);
-        $guzzle = new GuzzleClient(['handler' => $handlerStack]);
+        $guzzle = new GuzzleClient([
+            'handler' => $handlerStack,
+            'http_errors' => false,
+        ]);
 
         // Use reflection to inject the mock Guzzle client
         $client = new Client('sk_test_abc123');
