@@ -59,7 +59,7 @@ class Invoices
      */
     public function update(string $publicId, array $params): array
     {
-        return $this->client->request('PUT', "/v1/checkout/invoice/{$publicId}", $params);
+        return $this->client->request('PATCH', "/v1/checkout/invoice/{$publicId}", $params);
     }
 
     /**

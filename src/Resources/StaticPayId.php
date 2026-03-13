@@ -67,7 +67,7 @@ class StaticPayId
      */
     public function deactivate(string $id): array
     {
-        return $this->client->request('POST', "/v1/checkout/static-payid/{$id}/deactivate");
+        return $this->client->request('DELETE', "/v1/checkout/static-payid/{$id}");
     }
 
     /**

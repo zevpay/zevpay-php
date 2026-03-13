@@ -36,7 +36,7 @@ class DynamicPayIdTest extends TestCase
     {
         $this->mockClient->expects($this->once())
             ->method('request')
-            ->with('POST', '/v1/checkout/dynamic-payid/dpid_abc/deactivate')
+            ->with('DELETE', '/v1/checkout/dynamic-payid/dpid_abc')
             ->willReturn(['id' => 'dpid_abc', 'status' => 'inactive']);
 
         $result = $this->dynamicPayId->deactivate('dpid_abc');

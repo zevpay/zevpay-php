@@ -76,7 +76,7 @@ class TransfersTest extends TestCase
     {
         $this->mockClient->expects($this->once())
             ->method('request')
-            ->with('POST', '/v1/checkout/transfer/resolve-account', [
+            ->with('POST', '/v1/checkout/transfer/banks/resolve', [
                 'account_number' => '0123456789',
                 'bank_code' => '044',
             ])
@@ -93,7 +93,7 @@ class TransfersTest extends TestCase
     {
         $this->mockClient->expects($this->once())
             ->method('request')
-            ->with('POST', '/v1/checkout/transfer/calculate-charges', ['amount' => 1000000])
+            ->with('POST', '/v1/checkout/transfer/charges', ['amount' => 1000000])
             ->willReturn(['fee' => 5000, 'total' => 1005000]);
 
         $result = $this->transfers->calculateCharges(['amount' => 1000000]);

@@ -86,7 +86,7 @@ class Transfers
      */
     public function resolveAccount(array $params): array
     {
-        return $this->client->request('POST', '/v1/checkout/transfer/resolve-account', $params);
+        return $this->client->request('POST', '/v1/checkout/transfer/banks/resolve', $params);
     }
 
     /**
@@ -97,7 +97,7 @@ class Transfers
      */
     public function calculateCharges(array $params): array
     {
-        return $this->client->request('POST', '/v1/checkout/transfer/calculate-charges', $params);
+        return $this->client->request('POST', '/v1/checkout/transfer/charges', $params);
     }
 
     /**

@@ -30,7 +30,7 @@ class Wallet
      */
     public function update(array $params): array
     {
-        return $this->client->request('PUT', '/v1/checkout/wallet', $params);
+        return $this->client->request('PATCH', '/v1/checkout/wallet', $params);
     }
 
     /**
@@ -71,6 +71,6 @@ class Wallet
      */
     public function updateMember(string $payId, array $params): array
     {
-        return $this->client->request('PUT', "/v1/checkout/wallet/members/{$payId}", $params);
+        return $this->client->request('PATCH', "/v1/checkout/wallet/members/{$payId}", $params);
     }
 }

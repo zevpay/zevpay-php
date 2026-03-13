@@ -56,6 +56,6 @@ class DynamicPayId
      */
     public function deactivate(string $id): array
     {
-        return $this->client->request('POST', "/v1/checkout/dynamic-payid/{$id}/deactivate");
+        return $this->client->request('DELETE', "/v1/checkout/dynamic-payid/{$id}");
     }
 }

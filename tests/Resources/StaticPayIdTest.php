@@ -36,7 +36,7 @@ class StaticPayIdTest extends TestCase
     {
         $this->mockClient->expects($this->once())
             ->method('request')
-            ->with('POST', '/v1/checkout/static-payid/spid_abc/deactivate')
+            ->with('DELETE', '/v1/checkout/static-payid/spid_abc')
             ->willReturn(['id' => 'spid_abc', 'status' => 'inactive']);
 
         $result = $this->staticPayId->deactivate('spid_abc');
