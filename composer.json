@@ -1,7 +1,6 @@
 {
     "name": "zevpay/zevpay-php",
     "description": "Official ZevPay PHP SDK for the Checkout REST API",
-    "version": "0.1.0",
     "type": "library",
     "license": "MIT",
     "keywords": ["zevpay", "checkout", "payments", "nigeria", "fintech"],
