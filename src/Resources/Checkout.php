@@ -24,6 +24,7 @@ class Checkout
      *   customer_name?: string,
      *   metadata?: array<string, mixed>,
      *   payment_methods?: string[],
+     *   line_items?: array<array{name: string, description?: string, quantity: int, amount: int}>,
      * } $params
      * @return array<string, mixed>
      */
